@@ -54,3 +54,42 @@ function getFinalPrice(parcelWeight) {
 console.log(getFinalPrice(10)); //
 console.log(getFinalPrice(25)); //
 console.log(getFinalPrice("abc"));
+
+//task-5
+// Напишіть код, який запитуватиме у користувача
+// логін за допомогою prompt і виводить результат в консоль браузера
+
+// Після цього додайте перевірку введеного користувачем значення:
+// Якщо відвідувач вводить "Адмін",
+// то prompt запитує пароль (не забудьте зберігти його у змінну для подальшої перевірки).
+// Якщо нічого не ввели або натиснули Cancel,
+// Вивести в alert строку "Скасовано"
+// В іншому випадку вивести в alert рядок "Я вас не знаю"
+
+// Пароль перевіряти так:
+// Якщо введено пароль "Я головний",
+// то вивести в alert рядок "Добрий день!",
+// в іншому випадку вивести в alert рядок "Невірний пароль!"
+
+const login = prompt("Please enter your login");
+if (login === "Адмін") {
+  const password = prompt("Please enter your password");
+  if (password === "Я головний") {
+    alert("Добрий день!");
+  } else {
+    alert("Невірний пароль!");
+  }
+} else if (login === "" || login === null) {
+  alert("Скасовано");
+} else {
+  alert("Я вас не знаю");
+}
+
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+let i = 0;
+let number = 20;
+while (i <= number) {
+  console.log(i);
+  i += 1;
+}
