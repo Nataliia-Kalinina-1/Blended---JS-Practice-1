@@ -93,3 +93,91 @@ while (i <= number) {
   console.log(i);
   i += 1;
 }
+
+// Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
+// мінімальне і максимальне число відповідно.
+// Напишіть цикл всередині функції, який виводить у консоль
+// всі числа від max до min за спаданням.
+// Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
+// і поверніть її з функції.
+
+function getNumbers(min, max) {
+  let sumOfEvens = 0;
+  for (let i = max; i >= min; i--) {
+    console.log(i);
+
+    if (i % 2 === 0) {
+      sumOfEvens += i;
+    }
+  }
+  return sumOfEvens;
+}
+
+// Завдання 1: Фільтрація чисел 🔢
+// Напишіть функцію filterNumbers(start, end), яка приймає два параметри — мінімальне та максимальне число. У циклі переберіть всі числа від start до end і порахуйте:
+
+// Скільки з них є парними.
+
+// Скільки з них є непарними.
+
+// Функція повинна повертати рядок, що містить обидва результати, наприклад: "Парних: 5, Непарних: 5".
+
+function filterNumbers(start, end) {
+  let countOdds = 0;
+  let countEvens = 0;
+
+  for (let i = start; i <= end; i++) {
+    console.log(i);
+
+    if (i % 2 === 0) {
+      countEvens++;
+    } else {
+      countOdds++;
+    }
+  }
+  return `Парних: ${countEvens}, Непарних: ${countOdds}`;
+}
+console.log(filterNumbers(1, 10));
+
+// Завдання 2: Розрахунок середнього арифметичного 🎓
+// Напишіть функцію getAverage(start, end), яка приймає два параметри.
+
+// У циклі переберіть всі числа від start до end.
+
+// Знайдіть суму всіх цих чисел.
+
+// Порахуйте, скільки всього чисел у цьому діапазоні.
+
+// Поділіть суму на кількість чисел, щоб отримати середнє арифметичне.
+
+// Функція має повернути середнє арифметичне.
+
+function getAverage(start, end) {
+  let sumOfNumbers = 0;
+  for (let i = start; i <= end; i++) {
+    sumOfNumbers += i;
+  }
+  const totalNumbers = end - start + 1;
+  const sumAverage = sumOfNumbers / totalNumbers;
+
+  return sumAverage;
+}
+console.log(getAverage(1, 10));
+
+// Ви успішно впоралися з усіма основними концепціями. Давайте перейдемо до останнього завдання з цього списку:
+
+// Напишіть функцію calculateTotal(itemsCount, itemPrice), яка приймає кількість товарів та їхню ціну.
+
+// У циклі підрахуйте загальну суму покупки.
+
+// Якщо загальна сума перевищує 500, застосуйте знижку 15%.
+
+// В іншому випадку, знижки немає.
+
+// Функція повинна повертати кінцеву суму до сплати.
+
+function calculateTotal(itemsCount, itemPrice) {
+    const totalPrice = itemsCount * itemPrice;
+
+    if (totalPrice > 500) {return totalPrice * 0.85} else {return totalPrice}
+}
