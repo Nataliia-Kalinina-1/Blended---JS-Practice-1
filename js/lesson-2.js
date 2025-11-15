@@ -217,7 +217,7 @@ function getData(user) {
   const result = [];
   const keys = Object.keys(user);
   for (const key of keys) {
-    result.push(`${key}: ${user[key]`});
+    result.push(`${key}: ${`user[key]`});
     }
     return ${ key }:${ value };
 }
